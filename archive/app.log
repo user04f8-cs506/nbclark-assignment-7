@@ -1,0 +1,60 @@
+2024-11-10 12:26:20,690 WARNING  * Debugger is active!
+2024-11-10 12:26:20,692 INFO  * Debugger PIN: 401-237-063
+2024-11-10 12:27:07,418 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-10 12:27:07,419 INFO [33mPress CTRL+C to quit[0m
+2024-11-10 12:27:07,422 INFO  * Restarting with stat
+2024-11-10 12:27:09,605 WARNING  * Debugger is active!
+2024-11-10 12:27:09,608 INFO  * Debugger PIN: 401-237-063
+2024-11-10 12:27:12,556 INFO 127.0.0.1 - - [10/Nov/2024 12:27:12] "GET / HTTP/1.1" 200 -
+2024-11-10 12:27:12,631 INFO 127.0.0.1 - - [10/Nov/2024 12:27:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-10 12:27:17,726 INFO Generating data with N=8, mu=6.00, beta0=3.00, beta1=1.00, sigma2=2.00, S=38
+2024-11-10 12:27:18,333 INFO Proportion of slopes more extreme: 0.3158
+2024-11-10 12:27:18,334 INFO Proportion of intercepts more extreme: 0.6316
+2024-11-10 12:27:18,335 INFO Data generation successful.
+2024-11-10 12:27:18,337 INFO 127.0.0.1 - - [10/Nov/2024 12:27:18] "POST /generate HTTP/1.1" 200 -
+2024-11-10 12:27:18,470 INFO 127.0.0.1 - - [10/Nov/2024 12:27:18] "GET /static/plot2.png HTTP/1.1" 200 -
+2024-11-10 12:27:18,470 INFO 127.0.0.1 - - [10/Nov/2024 12:27:18] "GET /static/plot1.png HTTP/1.1" 200 -
+2024-11-10 12:27:18,490 INFO 127.0.0.1 - - [10/Nov/2024 12:27:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-10 12:27:24,773 INFO Hypothesis testing completed: p_value=0.6316
+2024-11-10 12:27:24,774 INFO 127.0.0.1 - - [10/Nov/2024 12:27:24] "POST /hypothesis_test HTTP/1.1" 200 -
+2024-11-10 12:27:24,875 INFO 127.0.0.1 - - [10/Nov/2024 12:27:24] "[36mGET /static/plot1.png HTTP/1.1[0m" 304 -
+2024-11-10 12:27:24,877 INFO 127.0.0.1 - - [10/Nov/2024 12:27:24] "[36mGET /static/plot2.png HTTP/1.1[0m" 304 -
+2024-11-10 12:27:24,884 INFO 127.0.0.1 - - [10/Nov/2024 12:27:24] "GET /static/plot3.png HTTP/1.1" 200 -
+2024-11-10 12:27:24,906 INFO 127.0.0.1 - - [10/Nov/2024 12:27:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-10 17:08:57,760 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-10 17:08:57,761 INFO [33mPress CTRL+C to quit[0m
+2024-11-10 17:08:57,764 INFO  * Restarting with stat
+2024-11-10 17:08:59,702 WARNING  * Debugger is active!
+2024-11-10 17:08:59,704 INFO  * Debugger PIN: 401-237-063
+2024-11-10 17:09:01,143 INFO 127.0.0.1 - - [10/Nov/2024 17:09:01] "[31m[1mGET /generate HTTP/1.1[0m" 405 -
+2024-11-10 17:09:03,127 INFO 127.0.0.1 - - [10/Nov/2024 17:09:03] "GET / HTTP/1.1" 200 -
+2024-11-10 17:09:03,187 INFO 127.0.0.1 - - [10/Nov/2024 17:09:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-10 17:09:17,792 INFO Generating data with N=50, mu=4.00, beta0=2.00, beta1=1.00, sigma2=3.00, S=50
+2024-11-10 17:09:18,669 INFO Proportion of slopes more extreme: 0.0400
+2024-11-10 17:09:18,670 INFO Proportion of intercepts more extreme: 0.9600
+2024-11-10 17:09:18,670 INFO Data generation successful.
+2024-11-10 17:09:18,672 INFO 127.0.0.1 - - [10/Nov/2024 17:09:18] "POST /generate HTTP/1.1" 200 -
+2024-11-10 17:09:18,815 INFO 127.0.0.1 - - [10/Nov/2024 17:09:18] "GET /static/plot1.png HTTP/1.1" 200 -
+2024-11-10 17:09:18,815 INFO 127.0.0.1 - - [10/Nov/2024 17:09:18] "GET /static/plot2.png HTTP/1.1" 200 -
+2024-11-10 17:09:33,531 INFO Hypothesis testing completed: p_value=0.9600
+2024-11-10 17:09:33,532 INFO 127.0.0.1 - - [10/Nov/2024 17:09:33] "POST /hypothesis_test HTTP/1.1" 200 -
+2024-11-10 17:09:33,606 INFO 127.0.0.1 - - [10/Nov/2024 17:09:33] "GET /static/plot1.png HTTP/1.1" 200 -
+2024-11-10 17:09:33,608 INFO 127.0.0.1 - - [10/Nov/2024 17:09:33] "GET /static/plot2.png HTTP/1.1" 200 -
+2024-11-10 17:09:33,620 INFO 127.0.0.1 - - [10/Nov/2024 17:09:33] "GET /static/plot3.png HTTP/1.1" 200 -
+2024-11-10 17:09:33,638 INFO 127.0.0.1 - - [10/Nov/2024 17:09:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-10 17:09:42,956 ERROR ValueError: could not convert string to float: ''
+2024-11-10 17:09:42,959 INFO 127.0.0.1 - - [10/Nov/2024 17:09:42] "[32mPOST /generate HTTP/1.1[0m" 302 -
+2024-11-10 17:09:42,976 INFO 127.0.0.1 - - [10/Nov/2024 17:09:42] "GET / HTTP/1.1" 200 -
+2024-11-10 17:09:43,045 INFO 127.0.0.1 - - [10/Nov/2024 17:09:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-10 17:09:48,724 INFO 127.0.0.1 - - [10/Nov/2024 17:09:48] "GET / HTTP/1.1" 200 -
+2024-11-10 17:09:48,791 INFO 127.0.0.1 - - [10/Nov/2024 17:09:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-10 17:09:55,000 INFO Generating data with N=50, mu=4.00, beta0=2.00, beta1=1.00, sigma2=3.00, S=50
+2024-11-10 17:09:55,461 INFO Proportion of slopes more extreme: 0.7200
+2024-11-10 17:09:55,462 INFO Proportion of intercepts more extreme: 0.1600
+2024-11-10 17:09:55,462 INFO Data generation successful.
+2024-11-10 17:09:55,464 INFO 127.0.0.1 - - [10/Nov/2024 17:09:55] "POST /generate HTTP/1.1" 200 -
+2024-11-10 17:09:55,537 INFO 127.0.0.1 - - [10/Nov/2024 17:09:55] "GET /static/plot2.png HTTP/1.1" 200 -
+2024-11-10 17:09:55,537 INFO 127.0.0.1 - - [10/Nov/2024 17:09:55] "GET /static/plot1.png HTTP/1.1" 200 -
+2024-11-10 17:09:55,558 INFO 127.0.0.1 - - [10/Nov/2024 17:09:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
