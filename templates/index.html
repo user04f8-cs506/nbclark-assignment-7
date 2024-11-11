@@ -5,25 +5,32 @@
     <title>Linear Regression Hypothesis Testing and Confidence Intervals</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         .container {
             width: 800px;
             max-width: 95%;
-            margin: 0 auto;
-            text-align: center;
-            background-color: #fff;
+            margin: 40px auto;
+            background-color: #ffffff;
             padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
             box-sizing: border-box;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             overflow-y: auto;
         }
-        h1, h2, h3 {
-            color: #333;
+        h1 {
+            font-size: 2em;
+            color: #4a90e2;
             margin-bottom: 20px;
+        }
+        h2, h3 {
+            font-size: 1.5em;
+            color: #4a90e2;
+            margin-bottom: 15px;
         }
         form {
             margin-top: 20px;
@@ -41,30 +48,33 @@
         input[type="number"],
         select {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             font-size: 16px;
             box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border: 1px solid #cfd8dc;
+            border-radius: 5px;
+            background-color: #f5f7fa;
         }
         button {
             margin-top: 20px;
             padding: 12px 30px;
             font-size: 16px;
-            background-color: #4285F4;
-            color: #fff;
+            font-weight: bold;
+            background-color: #4a90e2;
+            color: #ffffff;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         button:hover {
-            background-color: #3071E8;
+            background-color: #357ab8;
         }
         hr {
             margin: 40px 0;
             border: none;
             height: 1px;
-            background-color: #ddd;
+            background-color: #e0e0e0;
         }
         .result-section {
             margin-top: 40px;
@@ -74,6 +84,8 @@
             height: auto;
             margin-top: 20px;
             border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         p {
             color: #333;
@@ -84,13 +96,37 @@
             margin-top: 60px;
             color: #888;
             font-size: 14px;
+            text-align: center;
         }
         .error {
-            color: red;
+            color: #e74c3c;
             font-weight: bold;
             margin-top: 20px;
         }
+        .success {
+            color: #2ecc71;
+            font-weight: bold;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #4a90e2;
+        }
     </style>
+    <script>
+        // Capture the scroll position before navigating away
+        window.addEventListener("beforeunload", () => {
+            sessionStorage.setItem("scrollPos", window.scrollY);
+        });
+    
+        // Restore the scroll position after the page loads
+        window.addEventListener("load", () => {
+            const scrollPos = sessionStorage.getItem("scrollPos");
+            if (scrollPos) {
+                window.scrollTo(0, parseInt(scrollPos, 10));
+                sessionStorage.removeItem("scrollPos"); // Clean up after restoring
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="container">

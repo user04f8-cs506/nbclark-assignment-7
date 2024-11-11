@@ -1,14 +1,15 @@
-from flask import Flask, render_template, request, url_for, session
+from flask import Flask, redirect, render_template, request, url_for, session
 import numpy as np
-import matplotlib
 
+import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+
 from sklearn.linear_model import LinearRegression
 import scipy.stats as stats
 
 app = Flask(__name__)
-app.secret_key = "your_secret_key_here"  # Replace with your own secret key, needed for session management
+app.secret_key = "not_very_secret_key"
 
 
 def generate_data(N, mu, beta0, beta1, sigma2, S):
@@ -167,14 +168,16 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/generate", methods=["POST"])
-def generate_route():
-    # This route handles data generation (same as above)
+@app.route("/generate", methods=["GET", "POST"])
+def generate():
+    if request.method == "GET":
+        return redirect(url_for("index"))
     return index()
 
-
-@app.route("/hypothesis_test", methods=["POST"])
+@app.route("/hypothesis_test", methods=["GET", "POST"])
 def hypothesis_test():
+    if request.method == "GET":
+        return redirect(url_for("index"))
     # Retrieve data from session
     try:
         N = int(session.get("N"))
@@ -262,9 +265,10 @@ def hypothesis_test():
     )
 
 
-@app.route("/confidence_interval", methods=["POST"])
+@app.route("/confidence_interval", methods=["GET", "POST"])
 def confidence_interval():
-    # Retrieve data from session
+    if request.method == "GET":
+        return redirect(url_for("index"))
     try:
         N = int(session.get("N"))
         mu = float(session.get("mu"))
